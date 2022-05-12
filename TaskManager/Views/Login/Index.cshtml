@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post">
+    <div style="margin:50px auto;padding:20px; background:white;border-radius:10px;max-width:500px;">
+        <center>
+            <h3>Task Manager Login </h3>
+        </center>
+        <br />
+        <label for="username">User name *</label>
+        <input class="form-control" type="text" name="UserName" id="username" placeholder="entry username" />
+        <br />
+        <label for="password">Password *</label>
+        <input id="password" class="form-control" type="password" name="Password" placeholder="entry password" />
+        <br />
+        <center>
+            <button class="btn btn-success">Login</button>
+        </center>
+
+    </div>
+</form>
+<style>
+    body{
+        background:whitesmoke;
+    }
+</style>

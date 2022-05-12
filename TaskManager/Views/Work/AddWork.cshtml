@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.Work
+@{
+    ViewData["Title"] = "AddWork";
+}
+
+<center><h3>Add Work</h3></center>
+<br />
+@using (Html.BeginForm("AddWork", "Work", FormMethod.Post))
+{
+    <label for="workName">Work Name</label>
+    @Html.TextBoxFor(x => x.WorkName, new { @class = "form-control", @id = "workName", @placeholder = "entry work name" })
+    @Html.ValidationMessageFor(x => x.WorkName)
+    <br />
+    <label for="workStartDate">Work Start Date</label>
+    @Html.TextBoxFor(x => x.WorkStartDate, "{0:d MMM yyyy}", new { @class = "form-control", @id = "workStartDate", @placeholder = "dd-MM-yyyy" })
+    @Html.ValidationMessageFor(x => x.WorkStartDate)
+    <br />
+    <label for="workEndDate">Work End Date</label>
+    @Html.TextBoxFor(x => x.WorkEndDate, new { @class = "form-control", @id = "workEndDate",@placeholder = "dd-MM-yyyy" })
+    @Html.ValidationMessageFor(x => x.WorkEndDate)
+    <br />
+    <button class="btn btn-success">Add Work</button>
+}
